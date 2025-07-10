@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { NavBar, Logo, Wrapper, Content, First, Second, Title, Col } from "./styles";
 
 import logo from '../../assets/images/logo.svg'
@@ -48,6 +49,14 @@ const HomePage: React.FC = () => {
             setFoundList([]);
         }
     }
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        window.onpopstate = () => {
+            navigate("/home");
+        }
+    }, [navigate]);
 
     return (
         <Wrapper>
