@@ -86,3 +86,11 @@ export const Row = styled.div`
     align-items: center;
     justify-content: space-between;
 `;
+
+export const EmptyList = styled.div`
+    display: flex;
+    min-height: 70vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+`;
